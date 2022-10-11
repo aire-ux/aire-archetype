@@ -4,6 +4,7 @@
         name="quickstart">
     <requiredProperties>
         <requiredProperty key="organization"/>
+        <requiredProperty key="component-name"/>
     </requiredProperties>
 
     <fileSets>
@@ -21,6 +22,13 @@
         </fileSet>
         <fileSet filtered="true">
             <directory>settings</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+
+        <fileSet filtered="true">
+            <directory>src</directory>
             <includes>
                 <include>**/*</include>
             </includes>
