@@ -20,11 +20,8 @@
         <requiredProperty key="author">
             <defaultValue>${organization}</defaultValue>
         </requiredProperty>
+        <requiredProperty key="component-type-name"/>
 
-<!--        <requiredProperty key="component-class-name">-->
-<!--            <defaultValue>${StringUtils.removeAndHump("${organization}")}</defaultValue>-->
-
-<!--        </requiredProperty>-->
     </requiredProperties>
 
     <fileSets>

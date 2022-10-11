@@ -12,7 +12,7 @@ import {
   vi
 } from "vitest";
 import {
-  ${component-name.substring(0,1).toUpperCase()}${component-name.substring(1)}
+  ${component-type-name}
 } from "@${organization}/${component-name}/${component-name}"
 
 
