@@ -9,5 +9,14 @@
         <fileSet>
             <directory>src/test/java</directory>
         </fileSet>
+        <fileSet filtered="true">
+            <directory>bom</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
     </fileSets>
+
+
+
 </archetype-descriptor>
