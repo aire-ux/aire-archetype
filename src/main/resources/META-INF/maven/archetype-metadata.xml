@@ -2,6 +2,10 @@
         xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 https://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd"
         name="quickstart">
+    <requiredProperties>
+        <requiredProperty key="organization"/>
+    </requiredProperties>
+
     <fileSets>
         <fileSet filtered="true" packaged="true">
             <directory>src/main/java</directory>
@@ -11,6 +15,12 @@
         </fileSet>
         <fileSet filtered="true">
             <directory>bom</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory>settings</directory>
             <includes>
                 <include>**/*</include>
             </includes>
