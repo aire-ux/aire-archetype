@@ -10,7 +10,7 @@ import {
 } from 'lit/decorators/custom-element.js'
 
 @customElement('${component-name}')
-export class ${component-name.substring(0,1).toUpperCase()}${component-name.substring(1)} } extends LitElement
+export class ${component-name.substring(0,1).toUpperCase()}${component-name.substring(1)} extends LitElement
 {
 
 
