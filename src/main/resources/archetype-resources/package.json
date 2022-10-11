@@ -5,8 +5,8 @@
   "main": "dist/es2019/${component-name}.js",
   "exports": {
     ".": "dist/es2019/index.js",
-    "./wizard": "./dist/es2019/${component-name}.js",
-    "./styles/wizard.css": "./dist/styles/${component-name}.css"
+    "./${component-name}": "./dist/es2019/${component-name}.js",
+    "./styles/${component-name}.css": "./dist/styles/${component-name}.css"
   },
   "scripts": {
     "preinstall": "npx npm-force-resolutions",

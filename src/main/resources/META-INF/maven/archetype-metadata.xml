@@ -53,6 +53,12 @@
             <directory/>
             <includes>
                 <include>package.json</include>
+                <include>tsconfig.json</include>
+                <include>gulpfile.ts</include>
+                <include>types.d.ts</include>
+                <include>vite.config.ts</include>
+                <include>vite.generated.ts</include>
+                <include>vitest.config.ts</include>
             </includes>
         </fileSet>
     </fileSets>
