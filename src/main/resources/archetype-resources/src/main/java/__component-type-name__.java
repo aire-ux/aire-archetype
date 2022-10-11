@@ -11,7 +11,7 @@ import com.vaadin.flow.component.Button;
 @CssImport("@${organization}/${component-name}/styles/${component-name}.css")
 public class ${component-type-name} extends HtmlContainer {
 
-  public ${component-type-name} {
+  public ${component-type-name}() {
     add(new Button("Hello from ${component-type-name}!"));
   }
 

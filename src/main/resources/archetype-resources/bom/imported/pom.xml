@@ -8,12 +8,38 @@
     <version>${version}</version>
     <relativePath>../</relativePath>
   </parent>
-  <groupId>${groupId}</groupId>
-  <artifactId>${artifactId}-bom-imported</artifactId>
+  <groupId>${groupId}-${artifactId}</groupId>
+  <artifactId>bom-imported</artifactId>
   <version>${version}</version>
   <packaging>pom</packaging>
 
-  <name>${artifactId}</name>
+  <name>${artifactId} Exported Bill-Of-Materials</name>
   <url>https://sunshower.io</url>
+
+  <properties>
+    <aire.version>1.0.22.Final</aire.version>
+    <aire-test.version>1.0.9.Final</aire-test.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+
+      <dependency>
+        <groupId>io.sunshower.aire-test</groupId>
+        <artifactId>bom-exported</artifactId>
+        <type>pom</type>
+        <scope>import</scope>
+        <version>${aire-test.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>io.sunshower.aire</groupId>
+        <artifactId>bom-imported</artifactId>
+        <version>${aire.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
 </project>

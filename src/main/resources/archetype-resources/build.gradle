@@ -23,10 +23,10 @@ apply plugin: 'io.freefair.lombok'
 apply plugin: 'com.github.spotbugs'
 apply plugin: 'com.diffplug.spotless'
 apply from: "$rootDir/tasks/revisions.gradle"
+
 dependencyManagement {
     imports {
-        mavenBom "${group}:bom-imported:${version}"
-        mavenBom "${group}:bom-exported:${version}"
+        mavenBom "${groupId}-${artifactId}:bom-imported:${version}"
     }
 }
 
@@ -100,7 +100,6 @@ dependencies {
             'com.vaadin:vaadin-icons-flow',
             'com.vaadin:vaadin-button-flow',
             'com.vaadin:vaadin-ordered-layout-flow',
-            'io.sunshower.aire:aire-common',
             'com.vaadin:flow-html-components',
             'io.sunshower.arcus:arcus-lang',
             'io.sunshower.arcus:arcus-reflect'
