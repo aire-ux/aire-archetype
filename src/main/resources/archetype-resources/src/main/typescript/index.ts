@@ -1,1 +1,1 @@
-export * from "${component-name}"
+export * from "./${component-name}"

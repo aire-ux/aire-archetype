@@ -8,9 +8,11 @@ import {
 import {
   customElement
 } from 'lit/decorators/custom-element.js'
+// #set($component-type-name = ${StringUtils.removeAndHump("${component-name}")})
+#set($component-type-name = "coolbeans")
 
 @customElement('${component-name}')
-export class ${component-name.substring(0,1).toUpperCase()}${component-name.substring(1)} extends LitElement
+export class ${component-type-name} extends LitElement
 {
 
 

@@ -20,6 +20,11 @@
         <requiredProperty key="author">
             <defaultValue>${organization}</defaultValue>
         </requiredProperty>
+
+<!--        <requiredProperty key="component-class-name">-->
+<!--            <defaultValue>${StringUtils.removeAndHump("${organization}")}</defaultValue>-->
+
+<!--        </requiredProperty>-->
     </requiredProperties>
 
     <fileSets>
@@ -56,8 +61,6 @@
                 <include>tsconfig.json</include>
                 <include>gulpfile.ts</include>
                 <include>types.d.ts</include>
-                <include>vite.config.ts</include>
-                <include>vite.generated.ts</include>
                 <include>vitest.config.ts</include>
             </includes>
         </fileSet>

@@ -1,6 +1,6 @@
 import {
   ${component-name.substring(0,1).toUpperCase()}${component-name.substring(1)}
-} from "@${organization}/${component-name}";
+} from "@${organization}/${component-name}/${component-name}";
 
 export default function setup() {
 
