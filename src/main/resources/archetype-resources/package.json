@@ -23,7 +23,7 @@
     "Vaadin-Flow",
     "Java",
     "UI",
-    "UX",
+    "UX"
   ],
   "author": "${author}",
   "license": "MIT",
@@ -66,7 +66,6 @@
     "workbox-precaching": "6.5.0"
   },
   "dependencies": {
-    "@aire-ux/aire-wizard": "1.0.7",
     "@polymer/iron-icon": "3.0.1",
     "@polymer/iron-iconset-svg": "3.0.1",
     "@polymer/iron-list": "3.1.0",
@@ -188,7 +187,6 @@
   },
   "vaadin": {
     "dependencies": {
-      "@aire-ux/aire-wizard": "1.0.7",
       "@polymer/iron-icon": "3.0.1",
       "@polymer/iron-iconset-svg": "3.0.1",
       "@polymer/iron-list": "3.1.0",
@@ -428,7 +426,6 @@
     "lit": "$lit",
     "@polymer/polymer": "$@polymer/polymer",
     "date-fns": "$date-fns",
-    "@aire-ux/aire-wizard": "$@aire-ux/aire-wizard",
     "@vaadin/board": "$@vaadin/board",
     "@vaadin/charts": "$@vaadin/charts",
     "@vaadin/cookie-consent": "$@vaadin/cookie-consent",
