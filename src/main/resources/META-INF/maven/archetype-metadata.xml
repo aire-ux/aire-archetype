@@ -10,6 +10,10 @@
         <requiredProperty key="organization"/>
         <requiredProperty key="component-name"/>
 
+        <requiredProperty key="developer-id"/>
+        <requiredProperty key="developer-name" />
+        <requiredProperty key="developer-email" />
+
         <!--
             properties with defaults
         -->
@@ -28,6 +32,23 @@
         <fileSet filtered="true" packaged="true">
             <directory>src/main/java</directory>
         </fileSet>
+
+
+        <fileSet>
+            <directory>check</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+
+
+        <fileSet>
+            <directory>tasks</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+
         <fileSet>
             <directory>src/test/java</directory>
         </fileSet>
@@ -45,7 +66,15 @@
         </fileSet>
 
         <fileSet filtered="true">
-            <directory>src</directory>
+            <directory>src/main/typescript</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+
+
+        <fileSet filtered="true">
+            <directory>src/test/typescript</directory>
             <includes>
                 <include>**/*</include>
             </includes>
@@ -54,6 +83,18 @@
         <fileSet filtered="true">
             <directory/>
             <includes>
+                <!--
+                    Gradle files
+                -->
+                <include>build.gradle</include>
+                <include>gradle.properties</include>
+                <include>settings.gradle</include>
+
+                <!--
+                    NPM files
+                -->
+
+
                 <include>package.json</include>
                 <include>tsconfig.json</include>
                 <include>gulpfile.ts</include>
