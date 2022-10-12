@@ -241,7 +241,7 @@ publishing {
             /**
              * maven coordinates
              */
-            groupId = project.group
+            groupId = "${groupId}"
             version = project.version
             artifactId = project.name
 
