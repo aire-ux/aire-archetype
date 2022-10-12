@@ -26,7 +26,7 @@ class WizardTest {
 
   @ViewTest
   @Navigate("${component-name}")
-  void ensureWizardHostIsInjectable(@Select ${component-type-name}Example ex) {
+  void ensureWizardHostIsInjectable(@Select ${component-type-name}Route ex) {
     assertNotNull(ex);
   }
 

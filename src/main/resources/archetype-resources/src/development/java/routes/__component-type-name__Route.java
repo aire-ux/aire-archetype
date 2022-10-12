@@ -7,10 +7,10 @@ import ${package}.${component-type-name};
 
 @RouteScope
 @Route("${component-name}")
-public class ${component-type-name}Example extends VerticalLayout {
+public class ${component-type-name}Route extends VerticalLayout {
 
 
-  public ${component-type-name}Example() {
-    add(new ${component-type-name});
+  public ${component-type-name}Route() {
+    add(new ${component-type-name}());
   }
 }
