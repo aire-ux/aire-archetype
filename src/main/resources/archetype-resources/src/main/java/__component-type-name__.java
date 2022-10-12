@@ -10,6 +10,7 @@ import com.vaadin.flow.component.HtmlContainer;
 @Tag("${component-name}")
 @JsModule("@${organization}/${component-name}/${component-name}")
 @CssImport("@${organization}/${component-name}/styles/${component-name}.css")
+@NpmPackage(value = "@${organzation}/@${component-name}", version = Versions.${component-type-name}_VERSION)
 public class ${component-type-name} extends HtmlContainer {
 
   public ${component-type-name}() {

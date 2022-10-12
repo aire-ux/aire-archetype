@@ -22,11 +22,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 @EnableSpring
 @RouteLocation(scanPackage = "${package}.routes")
 @SpringBootTest(classes = ${component-type-name}DemoApplication.class)
-class WizardTest {
+class ${component-type-name}Test {
 
   @ViewTest
   @Navigate("${component-name}")
-  void ensureWizardHostIsInjectable(@Select ${component-type-name}Route ex) {
+  void ensure${component-type-name}HostIsInjectable(@Select ${component-type-name}Route ex) {
     assertNotNull(ex);
   }
 
