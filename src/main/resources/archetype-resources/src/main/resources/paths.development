@@ -1,0 +1,2 @@
+${component-name}=./ts/${component-name}.js
+${component-name}.css=./dist/styles/${component-name}.css
