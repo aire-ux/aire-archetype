@@ -24,11 +24,11 @@ def setVersion() {
         }
     }
     if(newVersion) {
-        println("Setting version from ${project.version} to $newVersion")
+        println("Setting version from $project.version to $newVersion")
         def props = loadProperties()
         props.version = newVersion.toString()
         writeProperties(props)
-        println("successfully updated project version ${project.version} to $newVersion")
+        println("successfully updated project version $project.version to $newVersion")
 
     } else {
         logger.warn("No new version passed in.  Not doing anything")
@@ -62,12 +62,13 @@ task populateVersions(type: Copy) {
 
 
 task populatePaths(type: Copy) {
-    from "${project.projectDir}/src/main/resources/templates/Paths.java"
-    into "${buildDir}/generated/sources/main/java/${package}"
+    from "$project.projectDir/src/main/resources/templates/Paths.java"
+    into "$buildDir/generated/sources/main/java/${package}"
 
     def devMode = findProperty('development') != null
     def properties = new Properties()
-    file("${project.projectDir}/src/main/resources/paths.${devMode ? "development" : "production"}").withInputStream {
+    def modeString = devMode ? "development" : "production";
+    file("${project.projectDir}/src/main/resources/paths.$modeString").withInputStream {
         properties.load(it)
     }
     filter(org.apache.tools.ant.filters.ReplaceTokens, tokens: properties)

@@ -13,8 +13,8 @@
     "unlink": "npm unlink @aire-ux/aire-wizard",
     "preinstall": "npx npm-force-resolutions",
     "test": "npx vitest --config vitest.config.ts run",
+    "build": "npx gulp build",
     "develop": "concurrently --kill-others \"npx vitest --config vitest.config.ts watch\" \"npx gulp watch\""
-    "build": "npx gulp build"
   },
   "repository": {
     "type": "git",
@@ -44,17 +44,16 @@
     "@types/gulp-sass": "^5.0.0",
     "@types/gulp-typescript": "^2.13.0",
     "@types/mocha": "^10.0.0",
-    "@types/node-sass": "^4.11.3",
     "@vitest/ui": "^0.24.0",
     "async": "3.2.2",
     "glob": "7.2.3",
     "gulp": "^4.0.0",
+    "sass": "^1.55.0",
     "gulp-sass": "^5.1.0",
     "gulp-typescript": "^5.0.1",
     "happy-dom": "^7.4.0",
     "lit": "^2.4.0",
     "mkdirp": "1.0.4",
-    "node-sass": "^7.0.3",
     "rollup-plugin-brotli": "3.1.0",
     "transform-ast": "2.4.4",
     "ts-node": "^10.9.1",

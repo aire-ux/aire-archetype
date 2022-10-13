@@ -1,11 +1,14 @@
 plugins {
-    id 'java'
     id 'pmd'
+    id 'java'
+    id 'signing'
     id 'com.vaadin'
     id 'maven-publish'
     id 'io.freefair.lombok'
     id 'com.github.spotbugs'
     id 'com.diffplug.spotless'
+    id 'org.springframework.boot'
+    id "com.github.node-gradle.node"
     id 'io.spring.dependency-management'
 }
 
@@ -14,14 +17,6 @@ repositories {
     mavenCentral()
 }
 
-apply plugin: 'pmd'
-apply plugin: 'signing'
-apply plugin: 'com.vaadin'
-apply plugin: 'java-library'
-apply plugin: 'maven-publish'
-apply plugin: 'io.freefair.lombok'
-apply plugin: 'com.github.spotbugs'
-apply plugin: 'com.diffplug.spotless'
 apply from: "$rootDir/tasks/revisions.gradle"
 
 dependencyManagement {
@@ -188,6 +183,7 @@ test {
 
 spotless {
     java {
+        targetExclude("build/**/*")
         googleJavaFormat('1.12.0')
     }
 }
@@ -293,4 +289,34 @@ publishing {
 signing {
     useGpgCmd()
     sign publishing.publications.pluginMaven
+}
+node {
+    download = true
+    version = "18.7.0"
+    npmVersion = "8.15.0"
+    distBaseUrl = "https://nodejs.org/dist"
+    nodeProjectDir = file("${project.projectDir}")
+}
+
+
+bootJar {
+    mainClass = '${package}${component-type-name}DemoApplication'
+    classpath = sourceSets.development.runtimeClasspath
+}
+
+/**
+ * run the development build
+ */
+
+task runDevelopment(
+        type: org.springframework.boot.gradle.tasks.run.BootRun,
+        dependsOn: [
+                'build',
+                'vaadinPrepareFrontend'
+        ]) {
+    group = 'development'
+    main = '${package}.${component-type-name}DemoApplication'
+    doFirst {
+        classpath = sourceSets.development.runtimeClasspath
+    }
 }

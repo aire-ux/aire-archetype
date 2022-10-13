@@ -52,7 +52,7 @@
         </fileSet>
 
 
-        <fileSet>
+        <fileSet filtered="true">
             <directory>tasks</directory>
             <includes>
                 <include>**/*</include>
