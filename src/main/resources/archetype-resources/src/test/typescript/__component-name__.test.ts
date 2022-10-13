@@ -20,7 +20,7 @@ import {html} from "lit";
 
 
 describe('a ${component-name}', async () => {
-  let element: Wizard;
+  let element: ${component-type-name};
   beforeEach(async () => {
     element = await fixture(html`
       <${component-name}></${component-name}>
