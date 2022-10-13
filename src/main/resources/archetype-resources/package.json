@@ -49,6 +49,7 @@
     "glob": "7.2.3",
     "gulp": "^4.0.0",
     "sass": "^1.55.0",
+    "concurrently": "^7.4.0",
     "gulp-sass": "^5.1.0",
     "gulp-typescript": "^5.0.1",
     "happy-dom": "^7.4.0",
