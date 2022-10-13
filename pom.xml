@@ -25,6 +25,7 @@
   </licenses>
 
 
+  <name>Aire Vaadin LitElement Archetype</name>
   <description>
     Aire/Vaadin Archetype Bill-Of-Materials parent POM
   </description>
