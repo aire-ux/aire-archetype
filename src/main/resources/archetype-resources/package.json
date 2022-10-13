@@ -6,12 +6,14 @@
   "exports": {
     ".": "dist/es2019/index.js",
     "./${component-name}": "./dist/es2019/${component-name}.js",
-    "./styles/${component-name}.css": "./dist/styles/${component-name}.css"
+    "./dist/styles/${component-name}.css": "./dist/styles/${component-name}.css"
   },
   "scripts": {
+    "link": "npm link . && npm link @aire-ux/aire-wizard",
+    "unlink": "npm unlink @aire-ux/aire-wizard",
     "preinstall": "npx npm-force-resolutions",
     "test": "npx vitest --config vitest.config.ts run",
-    "develop": "npx vitest --config vitest.config.ts watch",
+    "develop": "concurrently --kill-others \"npx vitest --config vitest.config.ts watch\" \"npx gulp watch\""
     "build": "npx gulp build"
   },
   "repository": {
