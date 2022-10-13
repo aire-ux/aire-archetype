@@ -1,4 +1,2 @@
-wizard=./ts/wizard.js
-wizard-page=./ts/wizard.js
-wizard.css=./dist/styles/wizard.css
-wizard-page.css=./dist/styles/wizard.css
+${component-name}=./ts/${component-name}.js
+${component-name}.css=./dist/styles/${component-name}.css
