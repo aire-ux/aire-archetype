@@ -100,3 +100,10 @@ Generates:
 └── vitest.config.ts
 
 ```
+
+To run, simply run:
+1. npm install
+2. gradle clean build pTML sA develop -Pdevelopment -x sign
+
+
+
