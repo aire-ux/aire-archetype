@@ -21,7 +21,7 @@ apply from: "$rootDir/tasks/revisions.gradle"
 
 dependencyManagement {
     imports {
-        mavenBom "${groupId}-${artifactId}:bom-imported:${version}"
+        mavenBom "${groupId}-${artifactId}:bom-imported:$version"
     }
 }
 
