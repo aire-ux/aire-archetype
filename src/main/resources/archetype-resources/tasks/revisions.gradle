@@ -50,8 +50,8 @@ task populateVersions(type: Copy) {
     file("gradle.properties").withInputStream {
         properties.load(it)
     }
-    def devMode = findProperty('development') != null
-    if (devMode) {
+    def productionMode = findProperty('production') != null
+    if (productionMode) {
         properties.replaceAll((k, v) -> {
             def sv = String.valueOf(v)
             return sv.contains("-SNAPSHOT") ? sv.replaceAll("-SNAPSHOT", "") : sv
@@ -65,9 +65,9 @@ task populatePaths(type: Copy) {
     from "$project.projectDir/src/main/resources/templates/Paths.java"
     into "$buildDir/generated/sources/main/java/${package}"
 
-    def devMode = findProperty('development') != null
+    def productionMode = findProperty('production') != null
     def properties = new Properties()
-    def modeString = devMode ? "development" : "production";
+    def modeString = productionMode ? "production" : "development";
     file("${project.projectDir}/src/main/resources/paths.$modeString").withInputStream {
         properties.load(it)
     }

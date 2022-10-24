@@ -1,6 +1,6 @@
 {
   "name": "@${organization}/${component-name}",
-  "version": "1.0.7",
+  "version": "1.0.0",
   "description": "${component-name}",
   "main": "dist/es2019/${component-name}.js",
   "exports": {
