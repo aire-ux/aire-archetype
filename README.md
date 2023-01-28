@@ -1,9 +1,17 @@
 # aire-archetype
 Maven Archetype for Aire-UX components
 
+## Development:
+
+To build:
+
+```bash
+mvn clean install -Dgpg.skip=true
+```
+
 ## Usage:
 
-Archeype properties:
+Archetype properties:
 
 1. archetypeGroupId: io.sunshower.aire
 2. archetypeArtifactId: aire-component-archetype

@@ -1,2 +1,2 @@
 ${component-name}=@${organization}/${component-name}
-${component-name}.css=@${organization}/${component-name}.css
+${component-name}.css=@${organization}/${component-name}/dist/styles/${component-name}.css

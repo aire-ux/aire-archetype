@@ -1,6 +1,6 @@
 {
   "name": "@${organization}/${component-name}",
-  "version": "1.0.7",
+  "version": "0.0.0",
   "description": "${component-name}",
   "main": "dist/es2019/${component-name}.js",
   "exports": {
@@ -9,8 +9,8 @@
     "./dist/styles/${component-name}.css": "./dist/styles/${component-name}.css"
   },
   "scripts": {
-    "link": "npm link . && npm link @aire-ux/aire-wizard",
-    "unlink": "npm unlink @aire-ux/aire-wizard",
+    "link": "npm link . && npm link @aire-ux/${component-name}",
+    "unlink": "npm unlink @aire-ux/${component-name}",
     "preinstall": "npx npm-force-resolutions",
     "test": "npx vitest --config vitest.config.ts run",
     "build": "npx gulp build",
