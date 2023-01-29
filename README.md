@@ -22,25 +22,9 @@ Archetype properties:
 7. component-name: the name of your LitElement tag
 
 ```bash
-
-
-
-rm -rf sup && mvn archetype:generate \
--DarchetypeGroupId=io.sunshower.aire \ 
--DarchetypeArtifactId=aire-component-archetype \
--DarchetypeVersion=1.0.0-SNAPSHOT \
--DgroupId=component.test.widget \
--DartifactId=sup \
--Dorganization=sunshower-io \
--Dcomponent-name=test-widget \
--Dcomponent-type-name=Widget \
--Ddeveloper-name=JosiahHaswell \
--Ddeveloper-id=josiahhaswell \
--Ddeveloper-email=josiah@sunshower.io \
--Dversion=1.0.0-SNAPSHOT -B \
-&& mvn clean install -f sup
-
-
+mvn archetype:generate \
+-DarchetypeGroupId=io.sunshower.aire \
+-DarchetypeArtifactId=aire-component-archetype
 ```
 
 Generates:

@@ -101,6 +101,7 @@
                 <include>build.gradle</include>
                 <include>gradle.properties</include>
                 <include>settings.gradle</include>
+                <include>README.md</include>
 
                 <!--
                     NPM files
