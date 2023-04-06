@@ -16,7 +16,7 @@ import com.vaadin.flow.component.HtmlContainer;
 /**
  * uncomment this if you have deployed this component into NPMJS
  */
-//@NpmPackage(value = "@${organzation}/@${component-name}", version = Versions.${component-type-name}_VERSION)
+//@NpmPackage(value = "@${organzation}/${component-name}", version = Versions.${component-type-name}_VERSION)
 public class ${component-type-name} extends HtmlContainer {
 
   public ${component-type-name}() {

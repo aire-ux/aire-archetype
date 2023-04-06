@@ -14,6 +14,7 @@
     "rootDir": ".",
     "outDir": "./dist",
 
+    "skipLibCheck": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noImplicitAny": true,
@@ -35,6 +36,6 @@
     "src/test/typescript/**/*",
   ],
   "exclude": [
-    "./node_modules"
+    "./node_modules/**/*"
   ]
 }
